@@ -8,7 +8,7 @@ const lifeEvents = [
   "I was born in Kokomo, Indiana",
   "I went to Ferris State University",
   "I opened a Pizzeria in the fall of 2017",
-  "I released my first ep January 1st of 2020",
+  "I released my first EP January 1st of 2020",
 ];
 
 //if/else loop
@@ -31,11 +31,29 @@ for (let i = 0; i < lifeEvents.length; i++) {
 
 // While loop
 
-const counter = 0;
+let counter = 0;
 
 while (true) {
-  let randomNumber = Math.floor(Math.random() * 10 + 1);
+  let randomNumber = Math.floor(Math.random() * 10) + 1;
+  if (randomNumber !== 5) {
+    counter++;
+    console.log(`${randomNumber} !==5`);
+  } else {
+    console.log(
+      `5 === 5. It took ${counter} iterations to randomly generate the number 5`
+    );
+    break;
+  }
 }
-if ((randomNumber !== 5, randomnumber++)) console.log(counter);
-console.log(`it took ${counter} iterations to randomly generate the number 5`);
-break;
+
+let hours = 50;
+let wage = 10;
+
+if (hours <= 40) {
+  let paycheck = hours * wage;
+  console.log(`You will receive $${paycheck} this week.`);
+} else {
+  let overtime = (hours - 40) * (wage * 1.5);
+  let paycheck = 40 * wage + overtime;
+  console.log(paycheck);
+}
